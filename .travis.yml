@@ -31,8 +31,8 @@ before_script:
   - export VSINSTALLDIR="/c/Program Files (x86)/Microsoft Visual Studio/Installer/"
   - ls /c/
   - ls "/c/Program Files (x86)/"
-  - ls "/c/Program Files (x86)/Microsoft Visual Studio/"
-  - ls "/c/Program Files (x86)/Microsoft Visual Studio 14.0/"
+  - ls "/c/Program Files (x86)/Microsoft Visual Studio/Installer"
+  # - ls "/c/Program Files (x86)/Microsoft Visual Studio 14.0/"
   # - MSVC=$(vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
   # - ls $(vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
 
