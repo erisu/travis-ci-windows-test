@@ -29,8 +29,6 @@ install:
 
 before_script:
   - export VSINSTALLDIR="/c/Program Files (x86)/Microsoft Visual Studio/Installer/"
-  - ls %VSINSTALLDIR%
-  - ls %VSINSTALLDIR%/MSBuild
 
 script:
   - cordova create windowsBuild
