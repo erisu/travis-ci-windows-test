@@ -30,7 +30,8 @@ install:
 before_script:
   - export VSINSTALLDIR="/c/Program Files (x86)/Microsoft Visual Studio/Installer/"
   - ls "/c/Program Files (x86)/MSBuild"
-  - echo $(%VSINSTALLDIR%/vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
+  - ls "/c/Program Files (x86)/MSBuild/15.0"
+  - %VSINSTALLDIR%/vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath
   
   # - ls /c/
   # - ls "/c/Program Files (x86)/"
