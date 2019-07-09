@@ -29,6 +29,10 @@ install:
 
 before_script:
   - export VSINSTALLDIR="/c/Program Files (x86)/Microsoft Visual Studio/Installer/"
+  - ls /c/Program Files (x86)/Microsoft Visual Studio/Installer/
+  - ls /c/
+  - MSVC=$(vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
+  - ls $(vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
 
 script:
   - cordova create windowsBuild
