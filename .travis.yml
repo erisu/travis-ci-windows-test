@@ -27,9 +27,15 @@ node_js:
 install:
   - npm i -g cordova
 
+before_script:
+  - export PATH="$PATH:/c/Program Files (x86)/Microsoft Visual Studio/Installer/"
+  - export MSVC=$(vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
+  - export MSVC=$(echo /$MSVC | sed -e 's/\\/\//g' -e 's/://')
+  - export PATH="$PATH:$MSVC/MSBuild/15.0/Bin/"
+  - echo $PATH
+
 script:
-  - |
-    cordova create windowsBuild
-    cd windowsBuild
-    cordova platform add windows
-    cordova run windows
+  - cordova create windowsBuild
+  - cd windowsBuild
+  - cordova platform add windows
+  - cordova run windows
